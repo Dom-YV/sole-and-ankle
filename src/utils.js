@@ -18,3 +18,14 @@ export function pluralize(string, num) {
 export function isNewShoe(releaseDate) {
   return differenceInDays(new Date(), releaseDate) < 30;
 }
+
+export function formatLabel(variant) {
+  switch(variant){
+    case 'new-release':
+      return 'Just Released!';
+    case 'on-sale':
+      return 'Sale';
+    default:
+      return "";
+  }
+}
